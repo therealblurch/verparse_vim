@@ -1,0 +1,24 @@
+*verparse.txt*  Integration with verparse_server for Verilog RTL navigation
+*verparse*
+
+                    Reference Manual
+
+================================================================================
+CONTENTS                                                     *verparse-contents*
+
+   1. Intro.........................................|verparse-intro|
+   2. Functionality Provided........................|verparse-functionality|
+   5. Options.......................................|verparse-options|
+   3. Commands......................................|verparse-commands|
+   4. Keymaps.......................................|verparse-keymaps|
+   5. About.........................................|verparse-about|
+   6. Changelog.....................................|verparse-changelog|
+   7. Credits.......................................|verparse-credits|
+
+================================================================================
+1. Intro                                                        *verparse-intro*
+
+Verparse is a plugin that allows VIM to query a verparse_server to allow easy 
+traversal of Verilog RTL hierarchies.  
+
+

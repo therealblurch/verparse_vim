@@ -1,0 +1,17 @@
+Verparse allows vim to interface with verparse_server which provides a way for easily traversing Verilog RTL hierarchies.  It adds the following keymappings to vim:
+
+   '\vw' (module list)
+   '\vm' (go to module definition)
+   '\vf' (go to signal defintion)
+   '\vd' (print define value in the tatusline
+   '\vj' (jump up one level)
+
+REQUIREMENTS
+
+This plugin requires vim 7.0 or greater and a running version of verparse_server.
+
+To install the plugin copy the contents of this directory to the vim plugins folder.  This plugin is also compatible with pathogen or vundle for easy installation and updating.
+
+For more information about configuration and options, see the supplied vim help file.
+
+For information about verparse_server, visit <http://github.com/zettawatt/VerParse.git>
