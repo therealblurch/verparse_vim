@@ -4,7 +4,6 @@ endif
 if !exists ("g:VPTop")
    let g:VPTop = "test"
 endif
-let VPModuleListName = "ModuleList"
 
 function! s:VPModuleListOpen(new_win)
    let split_win = a:new_win

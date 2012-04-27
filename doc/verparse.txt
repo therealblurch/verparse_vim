@@ -141,6 +141,8 @@ The verparse git repository can be found at http://github.com/cbtlsl/verparse_vi
 ================================================================================
 7.  Changelog                                               *verparse-changelog*
 
+0.2.1 - Moved VPModuleList definition to plugin file.
+
 0.2.0 - Changes made to make plugin more robust:
         1. Plugin now uses auto load.
         2. Keymaps made active only when needed.

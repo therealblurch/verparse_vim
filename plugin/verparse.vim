@@ -6,6 +6,10 @@ if !exists('g:VPMapPrefix')
    let g:VPMapPrefix = '<leader>v'
 endif
 
+if !exists('g:VPModuleListName')
+   let g:VPModuleListName = "ModuleList"
+endif
+
 if g:VPMapKeys
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."f" ":VPSignalSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."d" ":VPDefineSearch<CR>"
