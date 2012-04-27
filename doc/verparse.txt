@@ -8,17 +8,150 @@ CONTENTS                                                     *verparse-contents*
 
    1. Intro.........................................|verparse-intro|
    2. Functionality Provided........................|verparse-functionality|
-   5. Options.......................................|verparse-options|
-   3. Commands......................................|verparse-commands|
-   4. Keymaps.......................................|verparse-keymaps|
-   5. About.........................................|verparse-about|
-   6. Changelog.....................................|verparse-changelog|
-   7. Credits.......................................|verparse-credits|
+   3. Configuration.................................|verparse-configuration|
+   4. Commands......................................|verparse-commands|
+   5. Keymaps.......................................|verparse-keymaps|
+   6. About.........................................|verparse-about|
+   7. Changelog.....................................|verparse-changelog|
+   8. Credits.......................................|verparse-credits|
 
 ================================================================================
 1. Intro                                                        *verparse-intro*
 
-Verparse is a plugin that allows VIM to query a verparse_server to allow easy 
-traversal of Verilog RTL hierarchies.  
+Verparse is a vim plugin that allows VIM to query a verparse_server to allow easy 
+traversal of Verilog RTL hierarchies.  The verparse_server git repository can be 
+found at http://github.com/zettawatt/Verparse.git.
 
+================================================================================
+2. Functionality Provided                               *verparse-functionality*
+
+Verparse provides commands and keymaps that can be used to easily navigate to 
+Verilog signal and module definitions, display the current design hierarchy in 
+a scratch window, and jump up a level in the hierarchy.
+
+================================================================================
+3. Configuration                                        *verparse-configuration*
+
+Verparse can be configured with the following global variables:
+
+                                                         *verparse-VPPreCommand*
+
+g:VPPreCommand: String containing commands that will be executed before the 
+verparse_server command is executed.  This can be used to initialize the Verilog 
+environment in the shell for verparse execution. The default value for this 
+variable is null.
+
+                                                                *verparse-VPTop*
+
+g:VPTop: String containing the top level name of the RTL design.  This variable 
+must be set to match the design hierarchy that is being traversed.  The default 
+value for this variable is "test".
+
+                                                     *verparse-VPModuleListName*
+
+g:VPModuleListName: String containing the name of the module list buffer.  
+Defaults to "ModuleList".
+
+                                                            *verparse-VPMapKeys*
+
+g:VPMapKeys: If this variable is set to 0, |verparse-keymaps| are disabled.
+
+                                                          *verparse-VPMapPrefix*
+
+g:VPMapPrefix: The prefix used for verparse keymaps.  The default prefix is 
+'<leader>v'.
+
+================================================================================
+4.  Commands                                                 *verparse-commands*
+
+Verparse adds the following commands:
+
+                                                       *verparse-VPSignalSearch*
+
+VPSignalSearch: Searches for the definition of the signal located at 
+the cursor position.  After the search is complete, the file containing the 
+signal definition will be loaded and the cursor will be placed on the signal 
+definition.
+
+                                                       *verparse-VPModuleSearch*
+
+VPModuleSearch: Searches for the definition of the module located at 
+the cursor position.  After the search is complete, the file containing the 
+module definition will be loaded and the cursor will be placed on the module 
+defintion.
+
+                                                       *verparse-VPDefineSearch*
+
+VPDefineSearch: Prints the value of the define located at the cursor 
+position in the statusline.
+
+                                                       *verparse-VPJumpOneLevel*
+
+VPJumpOneLevel: Loads the file one level above the level of the current 
+file.
+
+                                                         *verparse-VPModuleList*
+
+VPModuleList: Opens a scratch buffer containing the complete hierarchy 
+of the current design.  From this window the cursor can be place on a module 
+name and a module search can be executed.
+
+================================================================================
+5.  Keymaps                                                   *verparse-keymaps*
+
+By default, verparse adds the following keymaps:
+
+                                                                           *\vf*
+\vf   Call VPSignalSearch
+
+This keymap is active only in files that have the verilog filetype.
+
+                                                                           *\vm*
+\vm   Call VPModuleSearch
+
+This keymap is active only in files that have the verilog filetype and in the 
+module list scratch window.
+
+                                                                           *\vd*
+\vd   Call VPDefineSearch
+
+This kepmap is active only in files that have the verilog filetype.
+
+                                                                           *\vj*
+\vj   Call VPJumpOneLevel
+
+This kepmap is active only in files that have the verilog filetype.
+
+                                                                           *\vw*
+\vw   Call VPModuleList
+
+This keymap is active at all times so that a module list can be opened in 
+a blank buffer.
+
+
+
+================================================================================
+6.  About                                                       *verparse-about*
+
+Verparse is maintained by Brent Loertscher (brent.loertscher@microchip.com).
+
+The verparse git repository can be found at http://github.com/cbtlsl/verparse_vim.git
+
+
+================================================================================
+7.  Changelog                                               *verparse-changelog*
+
+0.2.0 - Changes made to make plugin more robust:
+        1. Plugin now uses auto load.
+        2. Keymaps made active only when needed.
+        3. Added the ability to disable keymap definition.
+        4. Added the ability to change the keymap prefix.
+
+0.1.0 - Initial version
+
+================================================================================
+8.  Credits                                                   *verparse-credits*
+
+Thanks to Chuck McClish (charles.mcclish@microchip.com) for his work with 
+verparse_server.
 
