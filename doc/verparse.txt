@@ -61,6 +61,11 @@ g:VPMapKeys: If this variable is set to 0, |verparse-keymaps| are disabled.
 g:VPMapPrefix: The prefix used for verparse keymaps.  The default prefix is 
 '<leader>v'.
 
+                                                      *verparse-VPResponseStart*
+
+g:VPResponseStart: This variable contains the beginning of the path returned by the 
+verparse command.
+
 ================================================================================
 4.  Commands                                                 *verparse-commands*
 

@@ -10,6 +10,10 @@ if !exists('g:VPModuleListName')
    let g:VPModuleListName = "ModuleList"
 endif
 
+if !exists('g:VPResponseStart')
+   let g:VPResponseStart = "/home"
+endif
+
 if g:VPMapKeys
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."f" ":VPSignalSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."d" ":VPDefineSearch<CR>"
