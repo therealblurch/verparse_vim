@@ -18,8 +18,7 @@ if g:VPMapKeys
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."f" ":VPSignalSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."d" ":VPDefineSearch<CR>"
    execute "nnoremap <script> <silent> <unique>" g:VPMapPrefix."w" ":VPModuleList<CR>"
-   execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."m" ":VPModuleSearch<CR>"
-   execute "autocmd BufCreate ".g:VPModuleListName "nnoremap <buffer>" g:VPMapPrefix."m" ":VPModuleSearch<CR>"
+   execute "nnoremap <script> <silent> <unique>" g:VPMapPrefix."m" ":VPModuleSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."j" ":VPJumpOneLevel<CR>"
 endif
 
