@@ -109,23 +109,26 @@ By default, verparse adds the following keymaps:
                                                                            *\vf*
 \vf   Call VPSignalSearch
 
-This keymap is active only in files that have the verilog filetype.
+This keymap is active only in files that have the verilog or systemverilog
+filetype.
 
                                                                            *\vm*
 \vm   Call VPModuleSearch
 
-This keymap is active only in files that have the verilog filetype and in the 
-module list scratch window.
+This keymap is active only in files that have the verilog or systemverilog 
+filetype and in the module list scratch window.
 
                                                                            *\vd*
 \vd   Call VPDefineSearch
 
-This kepmap is active only in files that have the verilog filetype.
+This kepmap is active only in files that have the verilog or systemverilog
+filetype.
 
                                                                            *\vj*
 \vj   Call VPJumpOneLevel
 
-This kepmap is active only in files that have the verilog filetype.
+This kepmap is active only in files that have the verilog or systemverilog
+filetype.
 
                                                                            *\vw*
 \vw   Call VPModuleList
