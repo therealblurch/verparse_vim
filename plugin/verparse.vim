@@ -16,10 +16,13 @@ endif
 
 if g:VPMapKeys
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."f" ":VPSignalSearch<CR>"
+   execute "autocmd FileType systemverilog" "nnoremap <buffer>" g:VPMapPrefix."f" ":VPSignalSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."d" ":VPDefineSearch<CR>"
+   execute "autocmd FileType systemverilog" "nnoremap <buffer>" g:VPMapPrefix."d" ":VPDefineSearch<CR>"
    execute "nnoremap <script> <silent> <unique>" g:VPMapPrefix."w" ":VPModuleList<CR>"
    execute "nnoremap <script> <silent> <unique>" g:VPMapPrefix."m" ":VPModuleSearch<CR>"
    execute "autocmd FileType verilog" "nnoremap <buffer>" g:VPMapPrefix."j" ":VPJumpOneLevel<CR>"
+   execute "autocmd FileType systemverilog" "nnoremap <buffer>" g:VPMapPrefix."j" ":VPJumpOneLevel<CR>"
 endif
 
 command! VPSignalSearch :call verparse#VPSignalSearch()
